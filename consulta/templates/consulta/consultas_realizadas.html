@@ -1,0 +1,36 @@
+{% extends 'registration/base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="container">
+    <h1>Consultas Realizadas</h1>
+
+    {% if consultas %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nome do Paciente</th>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>Assunto</th>
+                    <th>Observações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for consulta in consultas %}
+                    <tr>
+                        <td>{{ consulta.nome_paciente|default:"Sem nome" }}</td>
+                        <td>{{ consulta.data_consulta|default:"Sem data" }}</td>
+                        <td>{{ consulta.hora_consulta|default:"Sem hora" }}</td>
+                        <td>{{ consulta.get_assunto_display|default:"Sem assunto" }}</td>
+                        <td>{{ consulta.observacoes|default:"Sem observações" }}</td>
+                        <td>{{ consulta.exame_realizado }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Não há consultas realizadas.</p>
+    {% endif %}
+</div>
+{% endblock %}

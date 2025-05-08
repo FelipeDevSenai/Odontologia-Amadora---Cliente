@@ -1,0 +1,441 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Ajuste a altura mínima para acomodar conteúdo */
+    margin-bottom: 50px; /* Adiciona um espaçamento extra para o footer */
+}
+
+
+.form-container {
+    width: 100%; /* Ocupa 100% da largura disponível */
+    max-width: 600px; /* Define uma largura máxima */
+    padding-bottom: 50vw; /* Ajuste para evitar sobreposição */
+    margin-top: 10vw
+
+}
+
+.titulo_consulta {
+    position: relative;
+    top: 5vw;   
+    left: 37vw;
+}
+
+.texto_consulta {
+    position: relative;
+    left: 6vw;
+}
+
+.titulo_consulta a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+.titulo_consulta a:hover {
+    text-decoration: underline;
+}
+/* Assumindo que você tem uma classe .form-control para outros elementos de formulário */
+
+.form-control {
+    /* Estilos comuns para todos os elementos do formulário */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem;
+  }
+/* Ajustes para o campo select */
+.select-medico {
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+    height: 3rem; /* Define uma altura fixa */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    appearance: none; /* Remove o estilo padrão do navegador */
+    -webkit-appearance: none; /* Para Safari */
+    -moz-appearance: none; /* Para Firefox */
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"%3E%3Cpath fill="%236c757d" d="M2 0L0 2h4zm0 5L0 3h4z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem auto;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.select-medico:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.select-medico option {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+    .select-medico {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        background-position: right 0.5rem center;
+        background-size: 0.8rem auto;
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .select-medico {
+        font-size: 0.9rem; /* Fonte menor em telas pequenas */
+    }
+}
+
+
+
+
+
+/* Botão principal */
+.botaosalvar{
+    z-index: +1;
+    position: relative;
+    top: 42em;
+    width: 100%;
+}
+.btn{
+    width: 100%;
+}
+.btn-primary {
+    font-size: 0.9rem;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.hdr h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    top: 60px;
+}
+
+.breadcrumb {
+    background: none;
+    padding: 0;
+    position: relative;
+    top: 70px;
+}
+
+.breadcrumb-item a {
+    color: #6c757d;
+    text-decoration: none;
+    position: relative;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+/* Formulário */
+.frm-box {
+    width: 100%;
+    max-width: 600px;
+    height: 670px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.btn-schedule {
+    background-color: #00bcd4;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    transition: background-color 0.3s;
+    width: 50%;
+    padding: 15px;
+}
+
+.btn-schedule:hover {
+    background-color: #0097a7;
+}
+
+/* Botão "Enviar Compromisso" */
+.btn-compromisso {
+    width: 50%;
+    padding: 15px;
+    position: relative;
+    top: 650px;
+    z-index: 1;
+    background-color: #00bcd4;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    transition: background-color 0.3s;
+    height: 50px;
+}
+
+.btn-compromisso:hover {
+    background-color: #0097a7;
+}
+
+/* Botão "Faça sua Consulta" */
+.btn-custom {
+    background-color: #00bcd4;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    transition: background-color 0.3s;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    right: 100px;
+}
+
+.btn-custom:hover {
+    background-color: #0097a7;
+}
+
+
+.marcarconsultabotao{
+    z-index: +1;
+    position: relative;
+    top: 110vh;
+    left: 95vh;
+
+}
+/* Parte inferior */
+.lower-section {
+    padding: 20px;
+    background: #e0f7fa;
+    padding: 20px;
+}
+.card {
+    width: 120%
+}
+
+.box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 120%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.info, .schedule {
+    padding: 20px;
+}
+
+.info {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.link-column {
+    margin-top: 20px;
+}
+
+.link-column h2 {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.link-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-column li {
+    margin: 5px 0;
+}
+
+.link-column li a {
+    text-decoration: none;
+    color: #00bcd4;
+    transition: color 0.3s;
+}
+
+.link-column li a:hover {
+    color: #0097a7;
+}
+
+.schedule {
+    background-color: #f7fafc;
+    border-radius: 0 0 8px 8px;
+}
+
+.schedule h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.schedule ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.schedule li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.schedule li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.schedule li a:hover {
+    transform: scale(1.05);
+}
+
+.schedule li span {
+    color: #666;
+}
+
+/* Botões */
+button {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    background-color: #78ABC3;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10vh;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-family: "Roboto Flex";
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+button[type="submit"]:hover {
+    background-color: #69C4D3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    .nav-header img {
+        margin-bottom: 10px;
+    }
+    
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-item {
+        margin: 5px 0;
+    }
+    
+    .btn-primary {
+        width: auto;
+    }
+    
+    .btn-outline-primary {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .frm-box {
+        padding: 15px;
+    }
+    
+    .box {
+        flex-direction: column;
+    }
+    
+    .info {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+}
+
+
+.iniciar-consulta img{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+td {
+    text-align: center; /* Alinha o conteúdo horizontalmente */
+    vertical-align: middle; /* Alinha o conteúdo verticalmente */
+}
+
+.iniciar-consulta img {
+    display: block; /* Garante que o ícone seja tratado como um bloco */
+    margin: 0 auto; /* Centraliza o bloco horizontalmente */
+}
+
+.botoes-consulta {
+    display: flex; /* Layout flexível */
+    gap: 3px; /* Espaçamento entre os botões */
+}
+
+.btn-proximas, .btn-realizadas {
+    padding: 6px 12px; /* Tamanho dos botões */
+    border: none;
+    border-bottom-left-radius: 0px; /* Arredonda os cantos */
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px; /* Arredonda os cantos */
+    cursor: pointer;
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.btn-proximas {
+    background-color: #999999; /* Cor azul */
+    color: white;
+}
+
+.btn-realizadas {
+    background-color: #6c757d; /* Cor cinza */
+    color: white;
+}
+
+.btn-proximas:hover, .btn-realizadas:hover {
+    opacity: 0.9; /* Efeito ao passar o mouse */
+}

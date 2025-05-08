@@ -1,0 +1,676 @@
+@font-face {
+    font-family: "Prosto One";
+    src: url("/static/fonts/ProstoOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Flex";
+    src: url("/static/fonts/RobotoFlex-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins Regular";
+    src: url("/static/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url("/static/fonts/PlayfairDisplay-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Inter Regular";
+    src: url("/static/fonts/Inter_28pt-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Inter Light";
+    src: url("/static/fonts/Inter_28pt-Light.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("/static/fonts/Montserrat-Regular.ttf");
+}
+
+
+
+
+
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header.container-nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.container-nav {
+    background-color: #78ABC3;
+    padding: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-nav img {
+    width: 10%;
+    height: auto;
+}
+
+
+
+
+
+.nav-item {
+    list-style-type: none;
+    margin: 0 20px;
+}
+
+.nav-item a {
+
+    font-family: "Poppins Regular";
+    color: rgb(46, 45, 45);
+    text-decoration: none;
+    padding: 8px 4px;
+    font-size: 90%;
+    font-weight: 500;
+    background-color: #78ABC3;
+    /* Fundo azul apenas nos itens de navegação */
+    border-radius: 5px;
+    /* Bordas arredondadas para cada item */
+}
+
+.nav-item a:hover {
+    color: rgb(0, 0, 0);
+
+    font-size: 99%;
+}
+
+.btn-outline-primary {
+
+    background-color: #0EC8DD;
+    border-radius: 50vh;
+    width: 20%;
+    min-width: 150px;
+    color: white;
+    border-color: transparent;
+    font-weight: 600;
+    z-index: 15;
+}
+
+.container-nav button:hover {
+    border-color: transparent;
+
+}
+
+/* Estilo do botão do menu hambúrguer */
+.hamburger-menu {
+    display: none;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: 40%;
+    top: -10vh;
+    width: 10px;
+    height: 50px;
+   
+}
+
+.opcao-responsiva {
+    display: none;
+  }
+
+@media (max-width: 768px) {
+    .container-nav {
+        height: auto;
+    }
+
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .container-nav img {
+        width: 10.3em;
+        height: 5.2em;
+        position: relative;
+        top: 2em;
+    }
+
+    .container-nav {
+        padding: 2vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        background-color: #78ABC3;
+        /* Adiciona cor de fundo ao menu */
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        /* Alinha os itens ao lado direito */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        /* Move o menu para a direita */
+        padding: 0;
+        /* Remove o espaçamento interno */
+        z-index: 150;
+        top: 45%;
+        border-radius: 2vh;
+
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+        /* Remove a borda do último item */
+    }
+
+    .nav-item a {
+        padding: 10px 20px;
+        /* Ajusta o preenchimento dos links */
+        display: block;
+        /* Faz com que os links ocupem a largura total do item */
+        background-color: #78ABC3;
+        /* Fundo dos itens de navegação */
+        color: white;
+    }
+
+    .hamburger-menu {
+        display: block;
+        z-index: 30;
+    }
+
+
+    .nav.active {
+        display: flex;
+        top: 125px;
+    }
+
+    .container-nav button {
+        width: 20%;
+        margin-top: 10px;
+    }
+
+    .opcao-responsiva {
+        display: block;
+    }
+
+    .dropdown-responsivo {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-nav img {
+        position: relative;
+        height: 7em;
+        width: 7em;
+        top: 3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-nav img {
+        width: 30%;
+    }
+
+    .nav-item a {
+        font-size: 80%;
+    }
+}
+
+/* parte de cima */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.faq-content {
+    background-color: #b2dae5;
+    padding: 20px;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.highlight {
+    color: #d9534f;
+    background: transparent;
+}
+
+.questions {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 55px;
+}
+
+.questions ul {
+    list-style: none;
+    padding: 0;
+    width: 45%;
+}
+
+
+
+@media (max-width: 768px) {
+    .questions {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -33px;
+    }
+
+    .questions ul {
+        width: 100%;
+    }
+}
+
+.midicao img {
+    nav-index: 5;
+    position: relative;
+    height: 70%;
+    width: 90%;
+    border-radius: 5vh;
+    margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+    .midicao img {
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-container h1 {
+        position: relative;
+        margin-left: -65px;
+    }
+}
+
+.faq-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.faq-container {
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    left: 80%;
+}
+
+.faq-container h1 {
+    position: relative;
+    left: 35%;
+}
+
+
+.pergunta {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resposta {
+    margin-top: 10px;
+    display: none;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.resposta.active {
+    display: block;
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.icon.rotate {
+    transform: rotate(180deg);
+}
+
+/* Rodapé */
+/* Rodapé */
+/* Rodapé */
+footer {
+    background-color: #d4eafd; /* Azul claro leve */
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+    padding: 1rem 0.8rem; /* Reduzido para ocupar menos altura */
+}
+
+.container-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem; /* Um pouco menos de espaço entre colunas */
+    text-align: center;
+    justify-items: center;
+}
+
+
+
+@media (max-width: 768px) {
+    .container-footer {
+        grid-template-columns: repeat(2, 1fr);
+        /* Reduz para 2 colunas em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .container-footer {
+        grid-template-columns: 1fr;
+        /* Seções empilhadas em telas pequenas */
+    }
+}
+/* Estilo geral do accordion */
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilo de cada item */
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo do botão */
+.accordion-button {
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o mouse no botão */
+.accordion-button:hover {
+    background-color: #78ABC3;
+}
+
+/* Estilo do conteúdo (escondido inicialmente) */
+.accordion-content {
+    max-height: 0; /* Escondido inicialmente */
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 20px; /* Padding 0 para conteúdo escondido */
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Estilo do conteúdo visível */
+.accordion-content.active {
+    max-height: 200px; /* Altura máxima ajustável conforme o conteúdo */
+    padding: 15px 20px; /* Adiciona padding ao exibir o conteúdo */
+}
+
+
+.nome-footer {
+    flex: 1 1 100%;
+    /* Largura responsiva */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.nome-footer h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    /* Alinhamento centralizado */
+    gap: 1rem;
+    /* Espaçamento entre ícones */
+    margin-top: 1rem;
+}
+
+.redes-sociais svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #898989;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.redes-sociais svg:hover {
+    color: rgb(53, 90, 175);
+    transform: scale(1.3);
+}
+
+.services,
+.about,
+.store {
+    flex: 1 1 300px;
+    /* Largura responsiva para cada bloco */
+    margin: 0;
+    /* Remove margens fixas */
+}
+
+.services h1,
+.about h1,
+.store h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.services a,
+.about a,
+.store a {
+    font-family: "Inter", sans-serif;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.services a:hover,
+.about a:hover {
+    color: #3a5bcccc;
+}
+
+.store img {
+    width: 100%;
+    /* Ajuste automático da largura */
+    max-width: 150px;
+    /* Tamanho máximo para evitar imagens grandes */
+    margin-top: 1rem;
+}
+
+.copyright {
+    color: black;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.copyright h1 {
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-footer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .nome-footer h1 {
+        font-size: 1.2rem;
+    }
+
+    .store img {
+        max-width: 100px;
+        /* Reduz tamanho em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .redes-sociais {
+        justify-content: center;
+        gap: 0.5rem;
+        /* Reduz espaço entre ícones */
+    }
+
+    .services h1,
+    .about h1,
+    .store h1 {
+        font-size: 1rem;
+    }
+
+    .store img {
+        max-width: 80px;
+    }
+
+    .copyright h1 {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Estilização do dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: #212529;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    border: 1.4px solid black;
+}
+
+
+/* Exibir o dropdown quando ativo */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Estilização do formulário de edição de perfil dentro do dropdown */
+.dropdown-form {
+    padding: 10px;
+    display: none;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+#opcoes {
+    background-color: white;
+}
+
+/* Estilos adicionais para os ícones */
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.dropdown-item .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.dropdown-item-text strong {
+    font-size: 1rem;
+    color: #333;
+}
+
+.hamburger-menu button:hover{
+    background-color: transparent;
+
+}
+
+/* Estilos responsivos específicos para o dropdown do perfil em telas menores */
+@media (max-width: 576px) {
+
+    /* Reduz o tamanho da imagem de perfil */
+    .perfil-imagem {
+        width: 24px;
+        height: 24px;
+        padding: 2px;
+    }
+
+    /* Ajusta o tamanho do dropdown e dos ícones sem interferir no cabeçalho */
+    .dropdown-menu {
+        min-width: auto;
+        padding: 0.3rem;
+        right: 10px;
+        /* Ajuste opcional para evitar o corte em bordas */
+    }
+
+    .dropdown-item .icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 6px;
+    }
+
+    /* Reduz o tamanho do texto */
+    .dropdown-item-text strong {
+        font-size: 1rem;
+    }
+}
+
+.container-nav{
+    z-index: 1;
+}
